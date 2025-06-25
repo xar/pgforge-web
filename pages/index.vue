@@ -26,9 +26,12 @@
               View on GitHub
             </a>
           </div>
-
         </div>
 
+        <!-- Terminal Demo -->
+        <div class="mt-16">
+          <TerminalDemo />
+        </div>
       </div>
     </section>
 
@@ -43,7 +46,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div class="feature-card text-center">
-            <Icon name="lucide:database" class="w-8 h-8 text-[#00ff41] mx-auto mb-3" />
+            <Icon
+              name="lucide:database"
+              class="w-8 h-8 text-[#00ff41] mx-auto mb-3"
+            />
             <h3 class="font-semibold mb-2">Multiple Instances</h3>
             <p class="text-gray-400 text-sm">
               Run different PostgreSQL versions simultaneously.
@@ -51,7 +57,10 @@
           </div>
 
           <div class="feature-card text-center">
-            <Icon name="lucide:file-code" class="w-8 h-8 text-[#00ff41] mx-auto mb-3" />
+            <Icon
+              name="lucide:file-code"
+              class="w-8 h-8 text-[#00ff41] mx-auto mb-3"
+            />
             <h3 class="font-semibold mb-2">YAML Configuration</h3>
             <p class="text-gray-400 text-sm">
               Declarative configuration with validation.
@@ -59,7 +68,10 @@
           </div>
 
           <div class="feature-card text-center">
-            <Icon name="lucide:terminal" class="w-8 h-8 text-[#00ff41] mx-auto mb-3" />
+            <Icon
+              name="lucide:terminal"
+              class="w-8 h-8 text-[#00ff41] mx-auto mb-3"
+            />
             <h3 class="font-semibold mb-2">CLI First</h3>
             <p class="text-gray-400 text-sm">
               Built for developers who love the terminal.
@@ -69,7 +81,24 @@
       </div>
     </section>
 
+    <!-- Releases Section -->
+    <section class="py-16 border-t border-gray-800/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl font-bold mb-4">
+            <span class="gradient-text">Latest Releases</span>
+          </h2>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            Stay up to date with the latest features, improvements, and bug
+            fixes.
+          </p>
+        </div>
 
+        <div class="max-w-4xl mx-auto">
+          <GitHubReleases :limit="3" />
+        </div>
+      </div>
+    </section>
 
     <!-- Installation Section -->
     <section class="py-16 border-t border-gray-800/50">
@@ -77,10 +106,12 @@
         <h2 class="text-2xl font-bold mb-6">
           <span class="gradient-text">Quick Install</span>
         </h2>
-        
+
         <div class="max-w-xl mx-auto mb-6">
           <div class="code-block">
-            <pre class="text-sm"><span class="terminal-comment"># Install script</span>
+            <pre
+              class="text-sm"
+            ><span class="terminal-comment"># Install script</span>
 <span class="terminal-prompt">$</span> <span class="terminal-command">curl -fsSL https://raw.githubusercontent.com/xar/pgforge.dev/main/install.sh | bash</span></pre>
           </div>
         </div>
@@ -90,7 +121,6 @@
         </NuxtLink>
       </div>
     </section>
-
   </div>
 </template>
 

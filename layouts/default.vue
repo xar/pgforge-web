@@ -88,5 +88,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Chat Widget -->
+    <ChatistoWidget />
   </div>
 </template>
