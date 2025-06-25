@@ -4,6 +4,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
   css: ["~/assets/css/main.css"],
+  umami: {
+    id: "b3f5c1b4-fa3b-43a8-9922-fa560e264359",
+    host: "https://umami.lsd.sk",
+    autoTrack: true,
+    domains: ["pgforge.dev", "www.pgforge.dev"],
+    enabled: true,
+  },
   app: {
     head: {
       title: "PgForge - Forge your PostgreSQL instances with precision",
@@ -32,11 +39,22 @@ export default defineNuxtConfig({
       ],
     },
   },
+  nitro: {
+    preset: "cloudflare_module",
+
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true,
+    },
+  },
+
   modules: [
     "@nuxt/content",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/scripts",
     "@nuxtjs/tailwindcss",
+    "nuxt-umami",
+    "nitro-cloudflare-dev",
   ],
 });

@@ -1,12 +1,12 @@
 {
-  "name": "<TBD>",
+  "name": "pgforgedev",
   "main": "./.output/server/index.mjs",
-  "compatibility_date": "<TBD>",
+  "compatibility_date": "2025-05-15",
   "assets": {
     "binding": "ASSETS",
-    "directory": "./.output/public/"
+    "directory": "./.output/public/",
   },
   "observability": {
-    "enabled": true
-  }
+    "enabled": true,
+  },
 }

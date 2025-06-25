@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@nuxt/content": "^3.6.1",
@@ -17,12 +19,15 @@
     "@tailwindcss/vite": "^4.1.10",
     "better-sqlite3": "^11.10.0",
     "nuxt": "^3.17.5",
+    "nuxt-umami": "^3.2.0",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^7.0.0-beta.0",
     "@tailwindcss/postcss": "^4.0.0",
-    "tailwindcss": "^4.1.10"
+    "nitro-cloudflare-dev": "^0.2.2",
+    "tailwindcss": "^4.1.10",
+    "wrangler": "^4.21.0"
   }
 }
